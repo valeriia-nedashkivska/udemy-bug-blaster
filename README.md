@@ -1,12 +1,41 @@
-# React + Vite
+# React 18 Course 2025 – Learn React JS the Fast Way
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Course Link
 
-Currently, two official plugins are available:
+[https://www.udemy.com/course/master-react](https://www.udemy.com/course/master-react)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## Expanding the ESLint configuration
+Bug Blaster is a React single‑page app for managing support tickets. Create, edit or delete tickets, set and update their priority (high, medium, low), and sort your list.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup & Run
+
+Follow these steps to get the project up and running on your local machine.
+
+### Prerequisites
+
+- **Node.js** v14+  
+- **npm** v6+ (bundled with Node.js)
+
+### Installation
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/valeriia-nedashkivska/udemy-moviedux.git
+   cd udemy-moviedux
+   ```
+
+2. **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3. **Format the code (if you want to apply consistent styling)**
+    ```bash
+    npm run beautify
+    ```
+
+4. **Run the Development Server**
+    ```bash
+    npm run dev
+    ```
