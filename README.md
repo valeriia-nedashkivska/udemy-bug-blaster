@@ -21,8 +21,8 @@ Follow these steps to get the project up and running on your local machine.
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/valeriia-nedashkivska/udemy-moviedux.git
-   cd udemy-moviedux
+   git clone https://github.com/valeriia-nedashkivska/udemy-bug-blaster.git
+   cd udemy-bug-blaster
    ```
 
 2. **Install dependencies**
