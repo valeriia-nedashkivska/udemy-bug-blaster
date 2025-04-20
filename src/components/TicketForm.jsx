@@ -3,22 +3,29 @@ import React, { useState } from 'react';
 export default function TicketForm() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [priority, setPriority] = useState('1');
+  const [priority, setPriority] = useState('LOW');
 
   const priorityLabels = {
-    1: 'Low',
-    2: 'Medium',
-    3: 'High',
+    LOW: 'Low',
+    MEDIUM: 'Medium',
+    HIGH: 'High',
   };
 
   const clearForm = () => {
     setTitle('');
     setDescription('');
-    setPriority('1');
+    setPriority('LOW');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const ticketData = {
+      id: new Date().toISOString(),
+      title,
+      description,
+      priority,
+    };
+    console.log(ticketData);
     clearForm();
   };
 
@@ -31,7 +38,7 @@ export default function TicketForm() {
           value={title}
           className="form-input"
           onChange={(e) => setTitle(e.target.value)}
-        />
+        ></input>
       </div>
       <div>
         <label>Description</label>
@@ -39,9 +46,28 @@ export default function TicketForm() {
           type="text"
           value={description}
           className="form-input"
-          onChange={(e) => setTitle(e.target.value)}
-        />
+          onChange={(e) => setDescription(e.target.value)}
+        ></textarea>
       </div>
+      <fieldset className="priority-fieldset">
+        <legend>Priority</legend>
+
+        {Object.entries(priorityLabels).map(([value, label]) => (
+          <label key={value} className="priority-label">
+            <input
+              type="radio"
+              value={value}
+              checked={priority === value}
+              className="priority-input"
+              onChange={(e) => setPriority(e.target.value)}
+            />
+            {label}
+          </label>
+        ))}
+      </fieldset>
+      <button type="submit" className="button">
+        Submit
+      </button>
     </form>
   );
 }
